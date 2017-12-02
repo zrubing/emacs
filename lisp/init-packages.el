@@ -32,6 +32,7 @@
 		      window-numbering
 		      evil-surround
 		      evil-nerd-commenter
+		      which-key
 		      ;; solarized-theme
 		      ) "Default packages")
 
@@ -113,5 +114,8 @@
 
 (define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
 (define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+
+;;which-key
+(which-key-mode 1)
 
 (provide 'init-packages)
