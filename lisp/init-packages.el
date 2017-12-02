@@ -28,6 +28,7 @@
 		      monokai-theme
 		      helm-ag
 		      evil
+		      evil-leader
 		      ;; solarized-theme
 		      ) "Default packages")
 
@@ -79,6 +80,7 @@
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 (require 'dired-x)
 
+(global-evil-leader-mode)
 (evil-mode 1)
 
 (setcdr evil-insert-state-map nil)
