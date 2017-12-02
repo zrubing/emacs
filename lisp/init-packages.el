@@ -60,6 +60,14 @@
 (require 'popwin)
 (popwin-mode 1)
 
+(put 'dired-find-alternate-file 'disabled nil)
 
+;; active load
+;; (require 'dired)
+;; (defined-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+
+;; lazy load
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
 (provide 'init-packages)
