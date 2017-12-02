@@ -69,5 +69,6 @@
 ;; lazy load
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+(require 'dired-x)
 
 (provide 'init-packages)
