@@ -29,6 +29,7 @@
 		      helm-ag
 		      evil
 		      evil-leader
+		      window-numbering
 		      ;; solarized-theme
 		      ) "Default packages")
 
@@ -85,5 +86,7 @@
 
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
+
+(window-numbering-mode 1)
 
 (provide 'init-packages)
