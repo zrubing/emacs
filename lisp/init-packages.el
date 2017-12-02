@@ -30,6 +30,7 @@
 		      evil
 		      evil-leader
 		      window-numbering
+		      evil-surround
 		      ;; solarized-theme
 		      ) "Default packages")
 
@@ -101,5 +102,9 @@
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 
 (window-numbering-mode 1)
+
+;;surround mode
+(require 'evil-surround)
+(global-evil-surround-mode)
 
 (provide 'init-packages)
