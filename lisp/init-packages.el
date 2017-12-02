@@ -31,6 +31,7 @@
 		      evil-leader
 		      window-numbering
 		      evil-surround
+		      evil-nerd-commenter
 		      ;; solarized-theme
 		      ) "Default packages")
 
@@ -106,5 +107,11 @@
 ;;surround mode
 (require 'evil-surround)
 (global-evil-surround-mode)
+;;enable nerd comment
+;;(evilnc-default-hotkeys)
+
+
+(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
 
 (provide 'init-packages)
