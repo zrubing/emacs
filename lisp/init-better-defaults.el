@@ -49,4 +49,10 @@
         (t (save-excursion
              (ignore-errors (backward-up-list))
              (funcall fn)))))
+
+(defun remove-dos-eol ()
+  "Replace DOS eolns CR LF with Unix eolns CR"
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))            
 (provide 'init-better-defaults)
