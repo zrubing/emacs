@@ -26,6 +26,8 @@
 		      exec-path-from-shell
 		      ;; --- Themes ---
 		      monokai-theme
+		      helm-ag
+		      evil
 		      ;; solarized-theme
 		      ) "Default packages")
 
@@ -77,4 +79,5 @@
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 (require 'dired-x)
 
+(evil-mode 1)
 (provide 'init-packages)
