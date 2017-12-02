@@ -84,6 +84,19 @@
 (global-evil-leader-mode)
 (evil-mode 1)
 
+(evil-leader/set-key
+  "ff" 'find-file
+  "bb" 'switch-to-buffer
+  "0"  'select-window-0
+  "1"  'select-window-1
+  "2"  'select-window-2
+  "3"  'select-window-3
+  "w/" 'split-window-right
+  "w-" 'split-window-below
+  ":"  'counsel-M-x
+  "wM" 'delete-other-windows
+  )
+
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 
