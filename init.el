@@ -26,11 +26,11 @@
 (require 'init-org)
 
 
-
-
-
-
-
+;; Chinese Font 配制中文字体
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset
+                    (font-spec :family "Microsoft Yahei" :size 20)))
 
 
 (custom-set-variables
